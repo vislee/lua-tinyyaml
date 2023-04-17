@@ -612,7 +612,7 @@ function Parser:parseseq(line, lines, indent)
     elseif rest then
       -- Array entry with a value
       tremove(lines, 1)
-      tinsert(seq, self:parsescalar(rest, lines))
+      tinsert(seq, self:parsescalar(rest, lines, 0))
     end
   end
   return seq
